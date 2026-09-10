@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawPlanet Privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#FBF6F0; --panel:#FFFFFF; --ink:#2E2A27; --muted:#79706A;
+    --line:#ECE2D8; --accent:#E7898A; --accent-ink:#B85E62; --grass:#7FB27A;
+    --shadow:0 1px 2px rgba(60,45,40,.04),0 10px 30px rgba(120,90,80,.07);
+    --maxw:44rem;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1817; --panel:#252120; --ink:#EFE8E2; --muted:#A79C94;
+      --line:#37302C; --accent:#E7898A; --accent-ink:#F0A9AA; --grass:#8FBE8A;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px rgba(0,0,0,.32);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1817; --panel:#252120; --ink:#EFE8E2; --muted:#A79C94;
+    --line:#37302C; --accent:#E7898A; --accent-ink:#F0A9AA; --grass:#8FBE8A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px rgba(0,0,0,.32);
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:clamp(1.5rem,4vw,3.5rem) clamp(1.15rem,4vw,2rem) 4rem;}
+  header.masthead{display:flex; flex-direction:column; gap:1.1rem; padding-bottom:1.6rem; border-bottom:1px solid var(--line); margin-bottom:2.2rem;}
+  .brand{display:flex; align-items:center; gap:.7rem;}
+  .paw{width:2.6rem;height:2.6rem;flex:0 0 auto;border-radius:50%;
+    background:radial-gradient(circle at 50% 38%,#FBE3E1,#F3C7C6);
+    display:grid;place-items:center;box-shadow:var(--shadow);}
+  .paw svg{width:1.5rem;height:1.5rem;display:block}
+  h1{font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:clamp(1.6rem,4.4vw,2.1rem);
+    margin:0; line-height:1.2; text-wrap:balance; letter-spacing:.01em;}
+  h1 .sub{display:block;font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:.92rem;color:var(--accent-ink);letter-spacing:.02em;margin-top:.35rem}
+  .meta{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.82rem;color:var(--muted)}
+  .meta b{color:var(--ink);font-weight:500}
+  .langtabs{display:inline-flex;gap:.25rem;background:var(--panel);border:1px solid var(--line);
+    border-radius:999px;padding:.25rem;box-shadow:var(--shadow);align-self:flex-start}
+  .langtabs button{font:inherit;font-size:.83rem;font-weight:500;cursor:pointer;border:0;background:transparent;
+    color:var(--muted);padding:.32rem .95rem;border-radius:999px;transition:all .15s}
+  .langtabs button[aria-selected="true"]{background:var(--accent);color:#fff}
+  .langtabs button:focus-visible{outline:2px solid var(--accent-ink);outline-offset:2px}
+  .lede{font-size:1.02rem;color:var(--muted);margin:0 0 2rem;padding:1rem 1.15rem;
+    background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--grass);border-radius:.7rem}
+  section.item{padding:1.4rem 0;border-top:1px solid var(--line)}
+  section.item:first-of-type{border-top:0;padding-top:.4rem}
+  h2{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:1.14rem;margin:0 0 .5rem;
+    display:flex;align-items:baseline;gap:.6rem}
+  h2 .no{font-size:.78rem;color:var(--accent-ink);font-weight:700;font-variant-numeric:tabular-nums}
+  p{margin:.5rem 0}
+  .facts{list-style:none;margin:.7rem 0 0;padding:0;display:grid;gap:.55rem}
+  .facts li{display:flex;gap:.6rem;align-items:flex-start;font-size:.96rem}
+  .facts li::before{content:"";flex:0 0 auto;width:.5rem;height:.5rem;margin-top:.62rem;border-radius:2px;
+    background:var(--grass)}
+  .facts li.no::before{background:var(--accent);border-radius:50%}
+  a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px}
+  .contact{margin-top:2.2rem;padding:1.3rem 1.35rem;background:var(--panel);border:1px solid var(--line);
+    border-radius:.9rem;box-shadow:var(--shadow)}
+  .contact h2{margin-bottom:.3rem}
+  footer{margin-top:2.4rem;padding-top:1.3rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+  [hidden]{display:none!important}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="langtabs" role="tablist" aria-label="Language">
+      <button role="tab" id="tab-ja" aria-selected="true" aria-controls="doc-ja">日本語</button>
+      <button role="tab" id="tab-en" aria-selected="false" aria-controls="doc-en">English</button>
+    </div>
+    <div class="brand">
+      <span class="paw" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#C86B6E"><circle cx="7" cy="9.2" r="2"/><circle cx="12" cy="7.4" r="2.2"/><circle cx="17" cy="9.2" r="2"/><path d="M12 11.2c-3 0-5.4 2.2-5.4 4.6 0 1.9 1.7 2.7 3.4 2.7 1 0 1.4-.3 2-.3s1 .3 2 .3c1.7 0 3.4-.8 3.4-2.7 0-2.4-2.4-4.6-5.4-4.6z"/></svg>
+      </span>
+      <h1 id="title-ja">PawPlanet プライバシーポリシー<span class="sub">歩いて育てる、世界一周ペット</span></h1>
+      <h1 id="title-en" hidden>PawPlanet Privacy Policy<span class="sub">Walk, grow pets, tour the world</span></h1>
+    </div>
+    <div class="meta">
+      <span><b>アプリ / App</b> PawPlanet (com.pawplanet.app)</span>
+      <span><b id="upd-ja">最終更新</b><b id="upd-en" hidden>Last updated</b> 2026-09-05</span>
+    </div>
+  </header>
+
+  <!-- ============ 日本語 ============ -->
+  <div id="doc-ja" role="tabpanel" aria-labelledby="tab-ja">
+    <p class="lede">PawPlanet は、あなたの歩数に合わせてペットが育つおさんぽ育成アプリです。<b>個人を特定する情報は収集せず</b>、あなたのデータは基本的にあなたの端末の中にとどまります。このページは、その扱いを分かりやすくまとめたものです。</p>
+
+    <section class="item">
+      <h2><span class="no">01</span>収集しない情報</h2>
+      <p>PawPlanet は、氏名・メールアドレス・電話番号・位置情報・連絡先といった個人を特定する情報を収集しません。会員登録やログインも不要で、あなたのプレイに関する情報は原則として端末内で完結します。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">02</span>ヘルスケア（歩数）データ</h2>
+      <p>ペットの育成と旅の進行のために、Apple の <b>HealthKit</b> から<b>歩数を「読み取り」だけ</b>行います。歩数の書き込みは行いません。</p>
+      <ul class="facts">
+        <li>読み取った歩数は、その日の育成・旅の計算に使うだけです</li>
+        <li>ヘルスケアのデータを当社サーバーや第三者へ送信することはありません</li>
+        <li>広告・分析・プロファイリングには一切利用しません</li>
+        <li class="no">利用にはあなたの許可が必要で、いつでも設定アプリから取り消せます</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">03</span>データの保存場所</h2>
+      <p>ペットやコレクション、設定などのセーブデータは、あなたの<b>端末内</b>に保存されます。加えて、あなたが iCloud にサインインしている場合は、機種変更に備えて <b>iCloud（Appleのサービス）</b>にも保存され、Apple のプライバシー方針のもとで同期されます。iCloud を使うかどうかは端末の設定次第で、当社がその内容を閲覧することはありません。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">04</span>アプリ内課金</h2>
+      <p>アイテムやプレミアム機能の購入は、すべて <b>Apple（App Store）を通じて</b>処理されます。クレジットカード番号などの決済情報を当社が受け取ったり保存したりすることはありません。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">05</span>通知</h2>
+      <p>お世話のリマインドなどの通知を送ることがあります。通知は任意で、許可しなくてもアプリは遊べますし、設定アプリからいつでもオフにできます。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">06</span>トラッキングと第三者提供</h2>
+      <ul class="facts">
+        <li class="no">広告は表示しません（本バージョン）</li>
+        <li class="no">第三者の解析・トラッキング用SDKは使用していません</li>
+        <li class="no">あなたのデータを第三者に販売・提供することはありません</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">07</span>お子様の利用</h2>
+      <p>本アプリは全年齢を対象としています。個人を特定する情報を収集しないため、お子様が遊ぶ場合でも追加の個人情報を取得することはありません。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">08</span>データの削除</h2>
+      <p>アプリを端末から削除すると、端末内のセーブデータは消去されます。iCloud 上の同期データは、端末の iCloud 設定から管理・削除できます。</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">09</span>本ポリシーの変更</h2>
+      <p>機能追加などに伴い、本ポリシーを更新することがあります。重要な変更がある場合は、このページの更新日を改めてお知らせします。</p>
+    </section>
+
+    <div class="contact">
+      <h2>お問い合わせ</h2>
+      <p>本ポリシーやプライバシーに関するご質問は、下記までご連絡ください。</p>
+      <p><a href="mailto:yoshitetsugames21@gmail.com">yoshitetsugames21@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- ============ English ============ -->
+  <div id="doc-en" role="tabpanel" aria-labelledby="tab-en" hidden>
+    <p class="lede">PawPlanet is a cozy pet-raising app where your pet grows with the steps you take. It <b>collects no personally identifying information</b>, and your data stays, as a rule, on your own device. This page explains how that works.</p>
+
+    <section class="item">
+      <h2><span class="no">01</span>Information we don't collect</h2>
+      <p>PawPlanet does not collect personally identifying information such as your name, email, phone number, location, or contacts. No account or sign-in is required, and information about your play stays on your device.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">02</span>Health (step count) data</h2>
+      <p>To grow your pet and advance your journey, the app <b>reads your step count only</b>, via Apple <b>HealthKit</b>. It never writes to Health.</p>
+      <ul class="facts">
+        <li>Steps are used only to calculate each day's growth and travel</li>
+        <li>Health data is never sent to our servers or any third party</li>
+        <li>It is never used for advertising, analytics, or profiling</li>
+        <li class="no">Access requires your permission and can be revoked anytime in Settings</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">03</span>Where your data lives</h2>
+      <p>Save data — your pets, collections, and settings — is stored <b>on your device</b>. If you are signed in to iCloud, it is also saved to <b>iCloud (an Apple service)</b> so a new phone is no problem, synced under Apple's privacy terms. Whether iCloud is used depends on your device settings, and we cannot view its contents.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">04</span>In-app purchases</h2>
+      <p>All purchases of items and premium features are processed <b>through Apple (the App Store)</b>. We never receive or store payment details such as card numbers.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">05</span>Notifications</h2>
+      <p>We may send reminders (for example, to care for your pet). Notifications are optional — the app works without them, and you can turn them off anytime in Settings.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">06</span>Tracking &amp; third parties</h2>
+      <ul class="facts">
+        <li class="no">No advertising is shown (this version)</li>
+        <li class="no">No third-party analytics or tracking SDKs are used</li>
+        <li class="no">We never sell or share your data with third parties</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">07</span>Children</h2>
+      <p>The app is intended for all ages. Because it collects no personally identifying information, no additional personal data is gathered when children play.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">08</span>Deleting your data</h2>
+      <p>Deleting the app from your device erases the save data on it. Data synced to iCloud can be managed and removed from your device's iCloud settings.</p>
+    </section>
+
+    <section class="item">
+      <h2><span class="no">09</span>Changes to this policy</h2>
+      <p>We may update this policy as features change. For significant changes, we will update the date shown on this page.</p>
+    </section>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>For any questions about this policy or your privacy, please reach out:</p>
+      <p><a href="mailto:yoshitetsugames21@gmail.com">yoshitetsugames21@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 PawPlanet</span>
+    <span>com.pawplanet.app</span>
+  </footer>
+</div>
+
+<script>
+  (function(){
+    var tabs={ja:document.getElementById('tab-ja'),en:document.getElementById('tab-en')};
+    var docs={ja:document.getElementById('doc-ja'),en:document.getElementById('doc-en')};
+    var titles={ja:document.getElementById('title-ja'),en:document.getElementById('title-en')};
+    var upd={ja:document.getElementById('upd-ja'),en:document.getElementById('upd-en')};
+    function set(lang){
+      var other=lang==='ja'?'en':'ja';
+      tabs[lang].setAttribute('aria-selected','true');
+      tabs[other].setAttribute('aria-selected','false');
+      docs[lang].hidden=false; docs[other].hidden=true;
+      titles[lang].hidden=false; titles[other].hidden=true;
+      upd[lang].hidden=false; upd[other].hidden=true;
+      document.documentElement.lang=lang;
+      try{localStorage.setItem('pp_priv_lang',lang);}catch(e){}
+    }
+    tabs.ja.addEventListener('click',function(){set('ja');});
+    tabs.en.addEventListener('click',function(){set('en');});
+    var saved; try{saved=localStorage.getItem('pp_priv_lang');}catch(e){}
+    if(saved==='en') set('en');
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawPlanet Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#FBF6F0; --panel:#FFFFFF; --ink:#2E2A27; --muted:#79706A;
+    --line:#ECE2D8; --accent:#E7898A; --accent-ink:#B85E62; --grass:#7FB27A;
+    --shadow:0 1px 2px rgba(60,45,40,.04),0 10px 30px rgba(120,90,80,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1817; --panel:#252120; --ink:#EFE8E2; --muted:#A79C94;
+      --line:#37302C; --accent:#E7898A; --accent-ink:#F0A9AA; --grass:#8FBE8A;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px rgba(0,0,0,.32);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1817; --panel:#252120; --ink:#EFE8E2; --muted:#A79C94;
+    --line:#37302C; --accent:#E7898A; --accent-ink:#F0A9AA; --grass:#8FBE8A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px rgba(0,0,0,.32);
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:44rem; margin:0 auto; padding:clamp(1.5rem,4vw,3.5rem) clamp(1.15rem,4vw,2rem) 4rem;}
+  header.masthead{display:flex; align-items:center; gap:.8rem; padding-bottom:1.5rem;
+    border-bottom:1px solid var(--line); margin-bottom:2rem;}
+  .paw{width:3rem;height:3rem;flex:0 0 auto;border-radius:50%;
+    background:radial-gradient(circle at 50% 38%,#FBE3E1,#F3C7C6); display:grid;place-items:center;box-shadow:var(--shadow);}
+  .paw svg{width:1.7rem;height:1.7rem}
+  h1{font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:clamp(1.5rem,4vw,2rem); margin:0; line-height:1.15;}
+  h1 .sub{display:block;font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:.9rem;color:var(--accent-ink);margin-top:.3rem}
+  .lede{font-size:1.02rem;color:var(--muted);margin:0 0 2rem}
+  .contact{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;padding:1.15rem 1.3rem;margin:0 0 2.4rem;
+    background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--grass);border-radius:.8rem;box-shadow:var(--shadow)}
+  .contact b{font-family:"Zen Maru Gothic",sans-serif}
+  .contact a{color:var(--accent-ink);font-weight:700;text-decoration:none;font-size:1.05rem}
+  h2{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:1.25rem;margin:0 0 1rem}
+  .faq{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+  .faq li{background:var(--panel);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
+  .q{font-weight:700;margin:0 0 .35rem;display:flex;gap:.5rem;align-items:baseline}
+  .q .mk{color:var(--accent-ink);font-family:"Zen Maru Gothic",sans-serif}
+  .a{margin:0;color:var(--muted);font-size:.97rem}
+  footer{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem}
+  a{color:var(--accent-ink)}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <span class="paw" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="#C86B6E"><circle cx="7" cy="9.2" r="2"/><circle cx="12" cy="7.4" r="2.2"/><circle cx="17" cy="9.2" r="2"/><path d="M12 11.2c-3 0-5.4 2.2-5.4 4.6 0 1.9 1.7 2.7 3.4 2.7 1 0 1.4-.3 2-.3s1 .3 2 .3c1.7 0 3.4-.8 3.4-2.7 0-2.4-2.4-4.6-5.4-4.6z"/></svg>
+    </span>
+    <h1>PawPlanet サポート<span class="sub">歩いて育てる、世界一周ペット</span></h1>
+  </header>
+
+  <p class="lede">PawPlanet をご利用いただきありがとうございます。ご質問・ご不明な点は、下記の窓口までお気軽にご連絡ください。よくあるご質問もご参照ください。</p>
+
+  <div class="contact">
+    <b>お問い合わせ</b>
+    <a href="mailto:yoshitetsugames21@gmail.com">yoshitetsugames21@gmail.com</a>
+    <span style="color:var(--muted);font-size:.85rem">（日本語・English どちらでも）</span>
+  </div>
+
+  <h2>よくあるご質問</h2>
+  <ul class="faq">
+    <li>
+      <p class="q"><span class="mk">Q.</span>機種変更したらデータは引き継がれますか？</p>
+      <p class="a">同じ Apple ID で iCloud にサインインしていれば、セーブデータは自動的に引き継がれます。新しい端末で PawPlanet を開くだけで復元されます。特別なログインは不要です。</p>
+    </li>
+    <li>
+      <p class="q"><span class="mk">Q.</span>歩数がペットに反映されません。</p>
+      <p class="a">「ヘルスケア」アプリの歩数を読み取っています。初回起動時の許可ダイアログで「許可」を選んでください。許可がまだの場合は、ホーム画面の案内、または iOS の「設定 ▸ プライバシーとセキュリティ ▸ ヘルスケア ▸ PawPlanet」からオンにできます。</p>
+    </li>
+    <li>
+      <p class="q"><span class="mk">Q.</span>購入したプレミアム／パウが反映されません。</p>
+      <p class="a">通信環境をご確認のうえ、ショップ画面の「購入を復元」をお試しください。買い切りのプレミアムはいつでも復元できます。それでも反映されない場合は、上記メールまでご連絡ください。</p>
+    </li>
+    <li>
+      <p class="q"><span class="mk">Q.</span>課金は安全ですか？</p>
+      <p class="a">すべての購入は Apple（App Store）を通じて処理され、クレジットカード情報などを当方が受け取ることはありません。</p>
+    </li>
+    <li>
+      <p class="q"><span class="mk">Q.</span>データはどう扱われますか？</p>
+      <p class="a">個人を特定する情報は収集していません。歩数は端末内で読み取るだけで外部には送信されません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    </li>
+  </ul>
+
+  <footer>
+    <span>© 2026 PawPlanet</span>
+    <span>com.pawplanet.app</span>
+  </footer>
+</div>
+
+</body>
+</html>
