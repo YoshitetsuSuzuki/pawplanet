@@ -1,5 +1,18 @@
 {
   "latestBuild": 28,
   "message": "バッジを一新🏆 全43種コンプ・100万歩・年間最高歩数など“すごい”バッジが新登場。ランキングの見かたを図解でわかりやすくし、同じ人が重複表示される不具合も修正しました🐾 ぜひ最新版へアップデートを！",
-  "url": "https://apps.apple.com/app/id6808814090"
+  "url": "https://apps.apple.com/app/id6808814090",
+  "ads": {
+    "ads_enabled": true,
+    "banner_enabled": false,
+    "interstitial_enabled": false,
+    "rewarded_enabled": true,
+    "interstitial_frequency": 0,
+    "minimum_interval_between_ads": 180,
+    "ad_provider": "levelplay",
+    "android": {
+      "ads_enabled": false,
+      "rewarded_enabled": false
+    }
+  }
 }
