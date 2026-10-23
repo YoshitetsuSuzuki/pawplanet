@@ -22,7 +22,13 @@
     var c = m ? decodeURIComponent(m[1]).toUpperCase().replace(/[^A-Z0-9]/g, "") : "";
     return /^[A-HJ-NP-Z2-9]{8}$/.test(c) ? c : "";   // フレンドコードの形（8文字・紛らわしい0/O/1/I なし）だけ受け付ける
   })();
-  if (!CODE) {
+  // グループ招待（?g=XXXXXX）：グループコード（6文字・同じ文字種）。招待コードより後ろの扱い（両方あれば招待コードを優先）
+  var GROUP = CODE ? "" : (function () {
+    var m = /[?&]g=([^&#]+)/.exec(location.search);
+    var g = m ? decodeURIComponent(m[1]).toUpperCase().replace(/[^A-Z0-9]/g, "") : "";
+    return /^[A-HJ-NP-Z2-9]{6}$/.test(g) ? g : "";
+  })();
+  if (!CODE && !GROUP) {
     if (isIOS) location.replace(IOS);
     else if (isAndroid && ANDROID_LIVE) location.replace(ANDROID);
   }
@@ -72,15 +78,15 @@
     <p class="tag" data-i="tag"></p>
 
     <section id="invite" class="invite" hidden>
-      <div class="lbl" data-i="lbl"></div>
+      <div class="lbl" data-i="lbl" data-g="glbl"></div>
       <div class="code" id="code"></div>
-      <div class="bonus" data-i="bonus"></div>
+      <div class="bonus" data-i="bonus" data-g="gbonus"></div>
       <ol class="steps">
         <li data-i="step1"></li>
-        <li data-i="step2"></li>
+        <li data-i="step2" data-g="gstep2"></li>
       </ol>
       <button class="btn" id="copyGo" data-i="copyGo"></button>
-      <a class="btn sub" id="openApp" href="#" data-i="openApp"></a>
+      <a class="btn sub" id="openApp" href="#" data-i="openApp" data-g="gopenApp"></a>
       <div class="toast" id="toast"></div>
     </section>
 
@@ -116,7 +122,11 @@
       memo: "コードをメモしてください：",
       soon: "Android 版はもうすぐ公開です。お楽しみに！",
       about: "PawPlanet について",
-      privacy: "プライバシー"
+      privacy: "プライバシー",
+      glbl: "グループへの招待",
+      gbonus: "仲間と毎週の歩数を競おう！ 🏃",
+      gstep2: "アプリの「グループ」で「コードで参加」に貼り付け",
+      gopenApp: "アプリを持っている人：そのままグループに参加"
     },
     "en": {
       title: "Get PawPlanet",
@@ -131,7 +141,11 @@
       memo: "Please note the code: ",
       soon: "The Android version is coming soon!",
       about: "About PawPlanet",
-      privacy: "Privacy"
+      privacy: "Privacy",
+      glbl: "Group invite",
+      gbonus: "Compete with your group every week! 🏃",
+      gstep2: "In the app, open Group → Join with a code and paste it",
+      gopenApp: "Already have the app? Join the group now"
     },
     "zh-Hans": {
       title: "下载 PawPlanet",
@@ -146,7 +160,11 @@
       memo: "请记下邀请码：",
       soon: "Android 版即将推出，敬请期待！",
       about: "关于 PawPlanet",
-      privacy: "隐私"
+      privacy: "隐私",
+      glbl: "群组邀请",
+      gbonus: "和伙伴们每周比拼步数吧！🏃",
+      gstep2: "在应用的“群组”中选择“用代码加入”并粘贴",
+      gopenApp: "已安装应用？直接加入群组"
     },
     "zh-Hant": {
       title: "下載 PawPlanet",
@@ -161,7 +179,11 @@
       memo: "請記下邀請碼：",
       soon: "Android 版即將推出，敬請期待！",
       about: "關於 PawPlanet",
-      privacy: "隱私"
+      privacy: "隱私",
+      glbl: "群組邀請",
+      gbonus: "和夥伴們每週比拼步數吧！🏃",
+      gstep2: "在 App 的「群組」中選擇「用代碼加入」並貼上",
+      gopenApp: "已安裝 App？直接加入群組"
     }
   };
   function pickLang() {
@@ -181,7 +203,10 @@
     document.documentElement.lang = lang;
     document.title = t.title;
     var els = document.querySelectorAll("[data-i]");
-    for (var i = 0; i < els.length; i++) els[i].textContent = t[els[i].getAttribute("data-i")] || "";
+    for (var i = 0; i < els.length; i++) {
+      var k = (GROUP && els[i].getAttribute("data-g")) || els[i].getAttribute("data-i");
+      els[i].textContent = t[k] || "";
+    }
     var bs = document.querySelectorAll("#langs button");
     for (var j = 0; j < bs.length; j++) bs[j].setAttribute("aria-pressed", bs[j].getAttribute("data-l") === lang ? "true" : "false");
   }
@@ -195,10 +220,11 @@
     document.getElementById("playBtn").hidden = true;
     document.getElementById("androidSoon").hidden = false;
   }
-  if (CODE) {
+  var SHOWN = CODE || GROUP;
+  if (SHOWN) {
     document.getElementById("invite").hidden = false;
-    document.getElementById("code").textContent = CODE;
-    document.getElementById("openApp").href = "pawplanet://addfriend?code=" + CODE;
+    document.getElementById("code").textContent = SHOWN;
+    document.getElementById("openApp").href = CODE ? ("pawplanet://addfriend?code=" + CODE) : ("pawplanet://joingroup?code=" + GROUP);
     // スマホではストアのボタンを「コピーしてストアへ」1つにまとめる（PC は両方のストアを残す）
     if (isIOS || isAndroid) document.getElementById("stores").hidden = true;
     if (isAndroid && !ANDROID_LIVE) {
@@ -209,12 +235,12 @@
     var store = isIOS ? IOS : (isAndroid && ANDROID_LIVE ? ANDROID : null);
     document.getElementById("copyGo").addEventListener("click", function () {
       var done = function (ok) {
-        document.getElementById("toast").textContent = (ok ? T[LANG].copied : T[LANG].memo) + CODE;
+        document.getElementById("toast").textContent = (ok ? T[LANG].copied : T[LANG].memo) + SHOWN;
         if (store) setTimeout(function () { location.href = store; }, ok ? 600 : 1800);
       };
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(CODE).then(function () { done(true); }, function () { done(false); });
+          navigator.clipboard.writeText(SHOWN).then(function () { done(true); }, function () { done(false); });
         } else { done(false); }
       } catch (e) { done(false); }
     });
