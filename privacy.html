@@ -84,7 +84,7 @@
     </div>
     <div class="meta">
       <span><b>アプリ / App</b> PawPlanet — iOS / Android (com.pawplanet.app)</span>
-      <span><b id="upd-ja">最終更新</b><b id="upd-en" hidden>Last updated</b> 2026-10-19</span>
+      <span><b id="upd-ja">最終更新</b><b id="upd-en" hidden>Last updated</b> 2026-10-23</span>
     </div>
   </header>
 
@@ -130,7 +130,8 @@
         <li>読み取った歩数は、育成・旅の計算に使います</li>
         <li>ランキングに参加している場合は、<b>今週・前週・累計の合計歩数</b>、今日の歩数（フレンドのお庭に表示）、グループの期間中の合計歩数を、匿名IDに紐づけて当社サーバーへ送ります</li>
         <li>引き継ぎコードを発行した場合は、セーブデータの一部として<b>日付ごとの歩数の合計と最高記録</b>も当社サーバーに保存されます（第05項）</li>
-        <li>歩いた時刻・区間・位置などの細かなデータは送りません。第三者への提供はありません</li>
+        <li>ランキングを公平に保つため（不正防止）、歩数がとくに多い日や手入力の歩数が多い日に限り、<b>その日の合計歩数・いちばん歩いた1時間の歩数とその時間帯・手入力された歩数</b>を送ることがあります。これは確認のための記録にだけ使い、これを理由に自動で記録を消したりアカウントを止めたりすることはありません</li>
+        <li>歩いた区間・位置、計測に使った機器の名前は保存しません。第三者への提供はありません</li>
         <li>広告・分析・プロファイリングには一切利用しません</li>
         <li class="no">利用にはあなたの許可が必要で、いつでも設定アプリ（Android はヘルスコネクト）から取り消せます。許可しなくてもアプリは利用できます</li>
       </ul>
@@ -155,7 +156,8 @@
     <section class="item">
       <h2><span class="no">08</span>広告と第三者のサービス</h2>
       <ul class="facts">
-        <li>本アプリには広告用のSDK（<b>Unity LevelPlay／Unity Ads</b>）が含まれます。広告を配信する場合、端末の識別子（IDFV など）・IPアドレス・端末の情報・広告の表示と操作の記録が Unity に送られます</li>
+        <li>本アプリには広告用のSDK（<b>Unity LevelPlay／Unity Ads</b>）が含まれます。広告を配信する場合、端末の識別子（iOS の IDFV、Android の広告ID・App Set ID など）・IPアドレスとそこから推定されるおおよその地域・端末の情報・アプリ内購入の有無・広告の表示と操作の記録が Unity に送られ、広告の配信・効果測定・不正防止に使われます。詳しくは <a href="https://unity.com/legal/privacy-policy">Unity のプライバシーポリシー</a>をご覧ください</li>
+        <li>Android では、端末の「設定」→「Google」→「広告」から広告IDを削除またはリセットできます</li>
         <li>広告は、「動画を見てごほうびをもらう」ボタンを押したときなどに表示されます。パウパスに加入中は、広告を見ずにごほうびを受け取れます</li>
         <li>トラッキングの許可（ATT）は求めません。ヘルスケアのデータを広告に使うことはありません</li>
         <li>データの保管と処理は、委託先（Supabase、Unity、設定ファイルの配信に GitHub）が行います</li>
@@ -165,7 +167,7 @@
 
     <section class="item">
       <h2><span class="no">09</span>お子様の利用</h2>
-      <p>本アプリは全年齢を対象としています。氏名などの個人を特定する情報は収集しません。</p>
+      <p>本アプリは<b>13歳未満のお子様を主な対象としていません</b>。氏名などの個人を特定する情報は収集しません。13歳未満のお子様の情報が送られていることにお気づきの保護者の方は、下記お問い合わせ先までご連絡ください。削除いたします。</p>
     </section>
 
     <section class="item">
@@ -173,7 +175,7 @@
       <p><b>ご意見フォーム</b> — 設定の「不具合報告・ご意見」から送られた本文は、アプリの版・OSの版・機種名とともに保存し、メールで転送することがあります。</p>
       <p><b>手順1：アプリ内でリセット</b> — 「設定」→「データをリセット」を選ぶと、端末内のセーブデータ（ペット・パウ・旅の記録など）が消え、新しい匿名アカウントに切り替わります。直前のデータとアカウントの鍵は、<b>14 日間</b>だけ端末内に控えとして残り、その間は「リセットを元に戻す」で戻せます。サーバー上のデータは自動では消えません。アプリを端末から削除すると端末内のセーブデータは消えますが、iOS ではアカウントの鍵・フレンドコード・引き継ぎコードがキーチェーンに残り、再インストールすると同じアカウントに戻ります（iCloud 同期分は端末の iCloud 設定から削除できます）。</p>
       <p><b>手順2：サーバー上のデータの削除を依頼</b> — 当社サーバーに保存されたデータ（表示名・ペット名・歩数・フレンドコード・引き継ぎデータ・ご意見等）の削除をご希望の場合は、下記お問い合わせ先へ<b>アプリ内の「フレンドコード」または「引き継ぎコード」を添えて</b>ご連絡ください。<b>受付から 30 日以内</b>に削除します。氏名・メールアドレスの提出は不要です。</p>
-      <p><b>保持期間</b> — サーバー上のプロフィール（表示名・歩数・ポイント等）とご意見は、削除依頼があるまで保持します。引き継ぎデータは最後の更新から <b>1 年</b>、週間ランキングの履歴は <b>90 日</b>、ギフト・応援の記録は <b>60 日</b>、招待の判定記録とお知らせは <b>180 日</b>で自動的に削除されます。削除後もバックアップには最長 90 日残ることがありますが、その後は完全に消去されます。</p>
+      <p><b>保持期間</b> — サーバー上のプロフィール（表示名・歩数・ポイント等）とご意見は、削除依頼があるまで保持します。週間ランキングの履歴・リーグの記録・あなた宛てのお知らせは <b>90 日</b>でアプリから見えなくなり、その後は過去の記録の確認・お問い合わせへの対応・不正の調査のための控えとして保管し、<b>記録から 1 年</b>で自動的に削除します。ギフト・応援の記録は <b>60 日</b>、招待の判定記録は <b>180 日</b>で自動的に削除されます。引き継ぎデータは最後の更新から <b>1 年</b>で引き継ぎに使えなくなります（データの復旧のご相談に備えて控えを保管し、削除のご依頼があれば削除します）。日々のバックアップは <b>90 日</b>で自動的に消去されます。</p>
     </section>
 
     <section class="item">
@@ -230,7 +232,8 @@
         <li>Steps are used to calculate growth and travel</li>
         <li>If you join the leaderboards, your <b>weekly, previous-week and lifetime totals</b>, today's steps (shown in your garden to friends) and group-mission totals are sent to our server, linked to an anonymous ID</li>
         <li>If you issue a transfer code, your <b>per-day step totals and personal bests</b> are stored on our server as part of your save data (section 05)</li>
-        <li>We never send timestamps, routes or location. Nothing is shared with third parties</li>
+        <li>To keep the leaderboards fair (fraud prevention), only on days with unusually high or manually entered steps, we may send <b>that day's total, the step count of your busiest hour and which hour it was, and the manually entered amount</b>. This is used only for review records; we never automatically delete your records or suspend accounts because of it</li>
+        <li>We do not store routes, location, or the names of the devices that measured your steps. Nothing is shared with third parties</li>
         <li>It is never used for advertising, analytics, or profiling</li>
         <li class="no">Access requires your permission and can be revoked anytime in Settings (Health Connect on Android). The app works without it</li>
       </ul>
@@ -255,7 +258,8 @@
     <section class="item">
       <h2><span class="no">08</span>Ads &amp; third-party services</h2>
       <ul class="facts">
-        <li>The app includes an ad SDK (<b>Unity LevelPlay / Unity Ads</b>). When ads are served, device identifiers (such as IDFV), IP address, device information and ad impressions/interactions are sent to Unity</li>
+        <li>The app includes an ad SDK (<b>Unity LevelPlay / Unity Ads</b>). When ads are served, device identifiers (IDFV on iOS; advertising ID and App Set ID on Android), IP address and the approximate region inferred from it, device information, whether in-app purchases were made, and ad impressions/interactions are sent to Unity and used for ad delivery, measurement and fraud prevention. See <a href="https://unity.com/legal/privacy-policy">Unity's Privacy Policy</a></li>
+        <li>On Android, you can delete or reset your advertising ID in Settings → Google → Ads</li>
         <li>Ads appear, for example, when you tap a "watch a video for a reward" button. With PawPass you get those rewards without watching ads</li>
         <li>We do not request tracking permission (ATT), and health data is never used for ads</li>
         <li>Data is stored and processed by our service providers (Supabase, Unity, and GitHub for configuration files)</li>
@@ -265,7 +269,7 @@
 
     <section class="item">
       <h2><span class="no">09</span>Children</h2>
-      <p>The app is suitable for all ages. We do not collect information that identifies you, such as your name.</p>
+      <p>The app is <b>not primarily directed at children under 13</b>. We do not collect information that identifies you, such as your name. If you are a parent and believe your child under 13 has sent us information, please contact us and we will delete it.</p>
     </section>
 
     <section class="item">
@@ -273,7 +277,7 @@
       <p><b>Feedback form</b> — Messages sent from "Feedback &amp; Bug Report" in Settings are stored with the app version, OS version and device model, and may be forwarded to us by email.</p>
       <p><b>Step 1: Reset in the app</b> — Open <b>Settings → Reset data</b>. This erases the save data on your device (pets, Paw, journey records) and switches you to a new anonymous account. Your previous data and account keys are kept on the device for <b>14 days</b> so you can undo the reset. Server data is not deleted automatically. Uninstalling the app erases on-device save data, but on iOS your account keys, friend code and transfer code remain in the Keychain and restore the same account if you reinstall (iCloud copies can be removed from your iCloud settings).</p>
       <p><b>Step 2: Request server-side deletion</b> — To have data stored on our server (display name, pet name, steps, friend code, transfer data, feedback, etc.) deleted, contact us at the address below <b>with the friend code or transfer code shown in the app</b>. We delete it <b>within 30 days</b> of your request. No name or email is required.</p>
-      <p><b>Retention</b> — Your server profile (display name, steps, points, etc.) and feedback are kept until you request deletion. Transfer data is deleted automatically <b>one year</b> after its last update, weekly ranking history after <b>90 days</b>, gift and cheer records after <b>60 days</b>, and invite records and announcements after <b>180 days</b>. Deleted data may remain in backups for up to 90 days before being purged.</p>
+      <p><b>Retention</b> — Your server profile (display name, steps, points, etc.) and feedback are kept until you request deletion. Weekly ranking history, league records and announcements addressed to you disappear from the app after <b>90 days</b>; after that they are kept as an archive for reviewing past records, answering inquiries and investigating fraud, and are deleted automatically <b>one year</b> after the record date. Gift and cheer records are deleted after <b>60 days</b>, and invite records after <b>180 days</b>. Transfer data can no longer be used for transfers <b>one year</b> after its last update (we keep an archive copy so we can help you recover your data, and delete it on request). Daily backups are purged automatically after <b>90 days</b>.</p>
     </section>
 
     <section class="item">
