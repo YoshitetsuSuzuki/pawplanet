@@ -14,5 +14,10 @@
       "ads_enabled": false,
       "rewarded_enabled": false
     }
+  },
+  "android": {
+    "latestBuild": 7,
+    "message": "ペットたちの世界が、少しにぎやかになりました🐾 アップデート記念に100パウをお届けします🎁 ぜひ最新版へ！",
+    "url": "https://play.google.com/store/apps/details?id=com.pawplanet.app"
   }
 }
