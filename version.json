@@ -11,8 +11,8 @@
     "minimum_interval_between_ads": 180,
     "ad_provider": "levelplay",
     "android": {
-      "ads_enabled": false,
-      "rewarded_enabled": false
+      "ads_enabled": true,
+      "rewarded_enabled": true
     }
   },
   "android": {
