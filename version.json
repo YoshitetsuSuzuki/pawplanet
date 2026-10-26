@@ -19,5 +19,17 @@
     "latestBuild": 7,
     "message": "ペットたちの世界が、少しにぎやかになりました🐾 アップデート記念に100パウをお届けします🎁 ぜひ最新版へ！",
     "url": "https://play.google.com/store/apps/details?id=com.pawplanet.app"
+  },
+  "gacha": {
+    "odds": {
+      "premium": {
+        "common": 0,
+        "rare": 0,
+        "epic": 30,
+        "legendary": 45,
+        "mythic": 25
+      }
+    },
+    "pity_top_premium": 6
   }
 }
