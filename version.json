@@ -32,12 +32,13 @@
       "rare": {
         "common": 0,
         "rare": 22,
-        "epic": 47,
+        "epic": 50,
         "legendary": 25,
         "mythic": 3
       }
     },
     "pity_top_premium": 6,
-    "rare_top_soft": 30
+    "rare_top_soft": 30,
+    "pity_4plus_v2": 20
   }
 }
