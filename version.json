@@ -18,7 +18,17 @@
   "android": {
     "latestBuild": 26,
     "message": "🐾 大型アップデート！世界一周の新ゴール・ひと続きの世界地図・友だちとのおすそわけたまご・速くなったランキング。友だちを5人誘うと、招待でしか会えない限定ペットが仲間に✨ 記念の100パウ🎁を受け取りに、ぜひ最新版へ！",
-    "url": "https://play.google.com/store/apps/details?id=com.pawplanet.app"
+    "url": "https://play.google.com/store/apps/details?id=com.pawplanet.app",
+    "messages": {
+      "ja": "🐾 大型アップデート！世界一周の新ゴール・ひと続きの世界地図・友だちとのおすそわけたまご・速くなったランキング。友だちを5人誘うと、招待でしか会えない限定ペットが仲間に✨ 記念の100パウ🎁を受け取りに、ぜひ最新版へ！",
+      "en": "🐾 Big update! A new world-tour finish, one seamless world map, Share-an-Egg with friends, and faster rankings. Invite 5 friends to meet a limited pet you can only get by inviting ✨ Update now and claim your 100 Paws gift 🎁",
+      "zh-Hans": "🐾 大型更新！环游世界的新终点、连成一张的世界地图、和朋友分享蛋、更快的排行榜。邀请5位朋友，就能遇见只有邀请才能获得的限定宠物✨ 快更新领取100爪币纪念礼物🎁",
+      "zh-Hant": "🐾 大型更新！環遊世界的新終點、連成一張的世界地圖、和朋友分享蛋、更快的排行榜。邀請5位朋友，就能遇見只有邀請才能獲得的限定寵物✨ 快更新領取100爪幣紀念禮物🎁",
+      "ko": "🐾 대규모 업데이트! 세계 일주의 새 골인 지점, 하나로 이어진 세계 지도, 친구와 나누는 나눔 알, 더 빨라진 랭킹. 친구 5명을 초대하면 초대로만 만날 수 있는 한정 펫이 함께해요✨ 업데이트하고 기념 100파우🎁를 받아 가세요!",
+      "es": "🐾 ¡Gran actualización! Nuevo final de la vuelta al mundo, un mapa del mundo continuo, Huevo compartido con amigos y ranking más rápido. Invita a 5 amigos y conoce una mascota limitada que solo se consigue invitando ✨ ¡Actualiza y recoge tus 100 Paws de regalo 🎁!",
+      "de": "🐾 Großes Update! Neues Ziel der Weltreise, eine durchgehende Weltkarte, Ei teilen mit Freunden und schnellere Ranglisten. Lade 5 Freunde ein und triff ein limitiertes Haustier, das es nur per Einladung gibt ✨ Jetzt aktualisieren und 100 Paw als Geschenk abholen 🎁",
+      "fr": "🐾 Grande mise à jour ! Nouvelle arrivée du tour du monde, une carte du monde d'un seul tenant, l'Œuf à partager avec tes amis et des classements plus rapides. Invite 5 amis pour rencontrer un animal limité qu'on n'obtient qu'en invitant ✨ Mets à jour et récupère tes 100 Paw offerts 🎁"
+    }
   },
   "gacha": {
     "odds": {
