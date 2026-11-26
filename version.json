@@ -1,5 +1,6 @@
 {
   "latestBuild": 85,
+  "minBuild": 76,
   "message": "🐾 新しいバージョンが出ました！アプリが全15言語に対応し、動作もより安定しました。ぜひ最新版へアップデートしてください！",
   "messages": {
     "ja": "🐾 新しいバージョンが出ました！アプリが全15言語に対応し、動作もより安定しました。ぜひ最新版へアップデートしてください！",
@@ -33,25 +34,26 @@
     }
   },
   "android": {
-    "latestBuild": 41,
-    "message": "🐾 新しいバージョンが出ました！アプリが全15言語に対応し、動作もより安定しました。ぜひ最新版へアップデートしてください！",
+    "latestBuild": 43,
+    "minBuild": 41,
+    "message": "新しいバージョンが出ました！QRコードでフレンドをかんたんに追加できるようになり、フレンド画面も使いやすくなりました。12月のクリスマスイベントに備えて、ぜひ最新版へアップデートしてください！",
     "url": "https://play.google.com/store/apps/details?id=com.pawplanet.app",
     "messages": {
-      "ja": "🐾 新しいバージョンが出ました！アプリが全15言語に対応し、動作もより安定しました。ぜひ最新版へアップデートしてください！",
-      "en": "🐾 A new version is out! PawPlanet now supports 15 languages and runs more smoothly. Update to the latest version!",
-      "zh-Hans": "🐾 新版本来了！App 现已支持 15 种语言，运行也更加稳定。快更新到最新版吧！",
-      "zh-Hant": "🐾 新版本來了！App 現已支援 15 種語言，運行也更加穩定。快更新到最新版吧！",
-      "ko": "🐾 새 버전이 나왔어요! 이제 15개 언어를 지원하고 더 안정적으로 작동해요. 최신 버전으로 업데이트해 주세요!",
-      "es": "🐾 ¡Hay una nueva versión! La app ya está disponible en 15 idiomas y funciona de forma más estable. ¡Actualiza a la última versión!",
-      "de": "🐾 Eine neue Version ist da! Die App gibt es jetzt in 15 Sprachen und sie läuft stabiler. Jetzt auf die neueste Version aktualisieren!",
-      "fr": "🐾 Une nouvelle version est disponible ! L'app existe désormais en 15 langues et elle est plus stable. Mets-la à jour dès maintenant !",
-      "pt-BR": "🐾 Saiu uma nova versão! O app agora está disponível em 15 idiomas e ficou mais estável. Atualize para a versão mais recente!",
-      "id": "🐾 Versi baru telah hadir! Aplikasi kini tersedia dalam 15 bahasa dan berjalan lebih stabil. Perbarui ke versi terbaru sekarang!",
-      "th": "🐾 เวอร์ชันใหม่มาแล้ว! แอปรองรับ 15 ภาษาและทำงานได้เสถียรขึ้น อัปเดตเป็นเวอร์ชันล่าสุดได้เลย!",
-      "vi": "🐾 Đã có phiên bản mới! Ứng dụng nay hỗ trợ 15 ngôn ngữ và hoạt động ổn định hơn. Hãy cập nhật lên phiên bản mới nhất nhé!",
-      "it": "🐾 È disponibile una nuova versione! L'app ora è disponibile in 15 lingue ed è più stabile. Aggiorna all'ultima versione!",
-      "hi": "🐾 नया वर्ज़न आ गया है! ऐप अब 15 भाषाओं में उपलब्ध है और पहले से ज़्यादा स्थिर चलता है। अभी नवीनतम वर्ज़न पर अपडेट करें!",
-      "ms": "🐾 Versi baharu sudah tiba! Aplikasi kini tersedia dalam 15 bahasa dan berjalan dengan lebih stabil. Kemas kini ke versi terkini sekarang!"
+      "ja": "新しいバージョンが出ました！QRコードでフレンドをかんたんに追加できるようになり、フレンド画面も使いやすくなりました。12月のクリスマスイベントに備えて、ぜひ最新版へアップデートしてください！",
+      "en": "A new version is out! You can now add friends easily with a QR code, and the Friends screen is easier to use. Update to the latest version to get ready for the Christmas event in December!",
+      "zh-Hans": "新版本来了！现在可以用二维码轻松添加好友，好友页面也更好用了。为迎接12月的圣诞活动，快更新到最新版吧！",
+      "zh-Hant": "新版本來了！現在可以用 QR 碼輕鬆新增好友，好友頁面也更好用了。為迎接12月的聖誕活動，快更新到最新版吧！",
+      "ko": "새 버전이 나왔어요! 이제 QR 코드로 간편하게 친구를 추가할 수 있고, 친구 화면도 더 쓰기 편해졌어요. 12월 크리스마스 이벤트에 대비해 최신 버전으로 업데이트해 주세요!",
+      "es": "¡Hay una nueva versión! Ahora puedes añadir amigos fácilmente con un código QR y la pantalla de Amigos es más cómoda. ¡Actualiza a la última versión y prepárate para el evento de Navidad de diciembre!",
+      "de": "Eine neue Version ist da! Freunde kannst du jetzt ganz einfach per QR-Code hinzufügen, und der Freunde-Bildschirm ist übersichtlicher. Aktualisiere jetzt, um für das Weihnachtsevent im Dezember bereit zu sein!",
+      "fr": "Une nouvelle version est disponible ! Ajoute facilement des amis avec un code QR, et l'écran Amis est plus simple à utiliser. Mets l'app à jour pour être prêt pour l'événement de Noël en décembre !",
+      "pt-BR": "Saiu uma nova versão! Agora dá para adicionar amigos facilmente com um código QR, e a tela de Amigos ficou mais fácil de usar. Atualize para a versão mais recente e prepare-se para o evento de Natal em dezembro!",
+      "id": "Versi baru telah hadir! Kini kamu bisa menambah teman dengan mudah lewat kode QR, dan layar Teman jadi lebih mudah digunakan. Perbarui ke versi terbaru untuk bersiap menyambut event Natal di bulan Desember!",
+      "th": "เวอร์ชันใหม่มาแล้ว! ตอนนี้เพิ่มเพื่อนได้ง่าย ๆ ด้วย QR และหน้าเพื่อนก็ใช้งานง่ายขึ้น อัปเดตเป็นเวอร์ชันล่าสุดเพื่อเตรียมพร้อมสำหรับอีเวนต์คริสต์มาสในเดือนธันวาคมได้เลย!",
+      "vi": "Đã có phiên bản mới! Giờ bạn có thể kết bạn dễ dàng bằng mã QR, và màn hình Bạn bè cũng dễ dùng hơn. Hãy cập nhật lên phiên bản mới nhất để sẵn sàng cho sự kiện Giáng sinh tháng 12 nhé!",
+      "it": "È disponibile una nuova versione! Ora puoi aggiungere amici facilmente con un codice QR e la schermata Amici è più semplice da usare. Aggiorna all'ultima versione per prepararti all'evento di Natale di dicembre!",
+      "hi": "नया वर्ज़न आ गया है! अब QR कोड से आसानी से दोस्त जोड़ें, और दोस्तों वाली स्क्रीन भी इस्तेमाल करने में आसान हो गई है। दिसंबर के क्रिसमस इवेंट की तैयारी के लिए अभी नवीनतम वर्ज़न पर अपडेट करें!",
+      "ms": "Versi baharu sudah tiba! Kini anda boleh menambah kawan dengan mudah menggunakan kod QR, dan skrin Kawan lebih mudah digunakan. Kemas kini ke versi terkini untuk bersedia menyambut acara Krismas pada bulan Disember!"
     }
   },
   "gacha": {
